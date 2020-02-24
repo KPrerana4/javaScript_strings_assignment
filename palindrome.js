@@ -1,21 +1,12 @@
-function checkPalindrome(string)
-{
-    let stringReverse = reverse(string);
-    if(stringReverse == string)
-    {
-        return true;
+function checkPalindrome(string){
+    let isPalindrome = true;
+    for(let index = 0; index < string.length / 2 ; index++){
+        if(string[index] != string[string.length - index -1]){
+            isPalindrome = false;
+            break;
+        }
     }
-    return false;
-}
-
-function reverse(string)
-{
-    let stringReverse = "", stringLength = string.length;
-    for(let index = stringLength - 1; index >= 0; index--)
-    {
-        stringReverse += string[index];
-    }
-    return stringReverse;
+    return isPalindrome;
 }
 
 function main()
