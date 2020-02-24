@@ -9,6 +9,13 @@ function countVowels(string){
     return vowelsCount;
 }
 
+function countVowels(string)
+{
+    let regularExpression = /[A,E,I,O,U,a,e,i,o,u]/g;
+    let vowels = string.match(regularExpression);
+    return vowels.length;
+}
+
 function main()
 {
     let string = "The quick brown fox jumps over the lazy dog. It barked.";
