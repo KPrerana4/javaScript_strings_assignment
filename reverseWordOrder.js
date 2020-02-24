@@ -8,3 +8,5 @@ function reverseWords(strings)
 }
 
 console.log(reverseWords("This   is my name  "));
+console.log(reverseWords(""));
+console.log(reverseWords(" Abcd "));
