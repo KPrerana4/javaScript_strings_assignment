@@ -13,6 +13,9 @@ function countVowels(sentence)
 {
     let regularExpression = /[A,E,I,O,U,a,e,i,o,u]/g;
     let vowels = sentence.match(regularExpression);
+    if(vowels == null){
+        return 0;
+    }
     return vowels.length;
 }
 
