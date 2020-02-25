@@ -1,7 +1,7 @@
-function countVowels(string){
-    let stringLength = string.length, vowelsCount = 0;
-    string = string.toUpperCase();
-    for(let char of string){
+function countVowels(sentence){
+    let vowelsCount = 0;
+    sentence = sentence.toUpperCase();
+    for(let char of sentence){
       if(char == 'A' || char == 'E' ||char == 'I' ||char == 'O' ||char == 'U'){
             vowelsCount++;
       }
@@ -9,18 +9,17 @@ function countVowels(string){
     return vowelsCount;
 }
 
-function countVowels(string)
+function countVowels(sentence)
 {
     let regularExpression = /[A,E,I,O,U,a,e,i,o,u]/g;
-    let vowels = string.match(regularExpression);
+    let vowels = sentence.match(regularExpression);
     return vowels.length;
 }
 
 function main()
 {
-    let string = "The quick brown fox jumps over the lazy dog. It barked.";
-    let vowelsCount = countVowels(string);
-    console.log("Number of vowels in string : " + vowelsCount);
+    let sentence = "The quick brown fox jumps over the lazy dog. It barked.";
+    console.log("Number of vowels in \"" +sentence+ "\":" + countVowels(sentence));
 }
 
 main();
