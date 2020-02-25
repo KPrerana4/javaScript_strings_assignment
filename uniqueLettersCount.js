@@ -1,7 +1,7 @@
-function countUniqueLetters(string)
+function countUniqueLetters(sentence)
 {
     let uniqueLetters = [];
-    for(let char of string.toUpperCase()){
+    for(let char of sentence.toUpperCase()){
         if(isAlphabet(char) && checkIfExists(char, uniqueLetters)){
             uniqueLetters.push(char);
         }
@@ -28,8 +28,8 @@ function checkIfExists(char, uniqueLetters)
 
 function main()
 {
-    let string = 'This is a sentence';
-    console.log("unique letters count : " + countUniqueLetters(string));
+    let sentence = 'This is a sentence';
+    console.log("unique letters count : " + countUniqueLetters(sentence));
 }
 
 main();
