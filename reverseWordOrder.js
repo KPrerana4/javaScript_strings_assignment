@@ -1,6 +1,6 @@
-function reverseWords(strings)
+function reverseWords(sentence)
 {
-    let words = strings.split(" "), wordsReverse = "";
+    let words = sentence.split(" "), wordsReverse = "";
     for(let index = words.length - 1; index >= 0; index--){
         wordsReverse += words[index] + " ";
     }
