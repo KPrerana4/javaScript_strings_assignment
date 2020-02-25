@@ -1,19 +1,19 @@
-function reverse(string)
+function reverse(sentence)
 {
-    let stringReverse = "", stringLength = string.length;
-    for(let index = stringLength - 1; index >= 0; index--)
+    let sentenceReverse = "", sentenceLength = sentence.length;
+    for(let index = sentenceLength - 1; index >= 0; index--)
     {
-        stringReverse += string[index];
+        sentenceReverse += sentence[index];
     }
-    return stringReverse;
+    return sentenceReverse;
 }
 
 function main()
 {
-    let string = "madaM";
-    console.log("Reverse of \"" + string + "\" is : " + reverse(string));
-    string = "";
-    console.log("Reverse of \"" + string + "\" is : " + reverse(string));
+    let sentence = "madaM Hello";
+    console.log("Reverse of \"" + sentence + "\" is : " + reverse(sentence));
+    sentence = "";
+    console.log("Reverse of \"" + sentence + "\" is : " + reverse(sentence));
 }
 
 main();
