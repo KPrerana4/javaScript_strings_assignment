@@ -1,7 +1,7 @@
-function countConsonants(string){
+function countConsonants(sentence){
     let consonantsCount = 0;
-    string = string.toUpperCase();
-    for(let char of string){
+    sentence = sentence.toUpperCase();
+    for(let char of sentence){
         if(checkConsonant(char)){
             consonantsCount++;
         }
@@ -19,9 +19,9 @@ function checkConsonant(char)
 
 function main()
 {
-    let string = "The quick brown fox jumps over the lazy dog. It barked.";
-    let consonantsCount = countConsonants(string);
-    console.log("Number of consonants : " + consonantsCount);
+    let sentence = "The quick brown fox jumps over the lazy dog. It barked.";
+    let consonantsCount = countConsonants(sentence);
+    console.log("consonants count(in \"" +sentence+ "\"):" + consonantsCount);
 }
 
 main();
