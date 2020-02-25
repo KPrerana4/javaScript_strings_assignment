@@ -1,18 +1,18 @@
-function camelCase(list)
+function camelCase(words)
 {
-    let string = list[0];
-    for(let index = 1; index < list.length; index++)
+    let sentence = words[0];
+    for(let index = 1; index < words.length; index++)
     {
-        let word = list[index];
-        string += word[0].toUpperCase() + word.substring(1,word.length);
+        let word = words[index];
+        sentence += word[0].toUpperCase() + word.substring(1,word.length);
     }
-    return string;
+    return sentence;
 }
 
 function main()
 {
-    let list = ["this", "is", "sentence"];
-    console.log("Camel Case : " + camelCase(list));
+    let words = ["this", "is", "sentence"];
+    console.log("Camel Case : " + camelCase(words));
 }
 
 main();
