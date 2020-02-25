@@ -1,7 +1,7 @@
-function checkPalindrome(string){
+function checkPalindrome(sentence){
     let isPalindrome = true;
-    for(let index = 0; index < string.length / 2 ; index++){
-        if(string[index] != string[string.length - index -1]){
+    for(let index = 0; index < sentence.length / 2 ; index++){
+        if(sentence[index] != sentence[sentence.length - index -1]){
             isPalindrome = false;
             break;
         }
@@ -11,10 +11,10 @@ function checkPalindrome(string){
 
 function main()
 {
-    let string = "madaM";
-    console.log(string + " is Palindrome : " + checkPalindrome(string));
-    string = "AbcbA";
-    console.log(string + " is palindrome : " + checkPalindrome(string));
+    let sentence = "madam madaM";
+    console.log(sentence + " is Palindrome : " + checkPalindrome(sentence));
+    sentence = "AbcbA";
+    console.log(sentence + " is palindrome : " + checkPalindrome(sentence));
 }
 
 main();
