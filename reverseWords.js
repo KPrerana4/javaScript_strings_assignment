@@ -1,21 +1,21 @@
 function reverseTheWord(word)
 {
-    let newString = "";
+    let reverseWord = "";
     for(let index = word.length - 1 ; index >= 0; index--)
     {
-        newString += word[index];
+        reverseWord += word[index];
     }
-    return newString;
+    return reverseWord;
 }
 
-function reverseWordsCharacters(string)
+function reverseWordsCharacters(sentence)
 {
-    let words = string.split(' '), newString = "";
+    let words = sentence.split(' '), newSentence = "";
     for(let word of words)
     {
-        newString += reverseTheWord(word) + " ";
+        newSentence += reverseTheWord(word) + " ";
     }
-    return newString;
+    return newSentence;
 }
 
 console.log(reverseWordsCharacters("This is My name *&%"));
