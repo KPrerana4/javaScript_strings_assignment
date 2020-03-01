@@ -1,19 +1,18 @@
-function checkPalindrome(sentence){
-    let isPalindrome = true;
-    for(let index = 0; index < sentence.length / 2 ; index++){
-        if(sentence[index] != sentence[sentence.length - index -1]){
-            isPalindrome = false;
-            break;
-        }
-    }
-    return isPalindrome;
+function checkPalindrome(sentence)
+{
+    let characters = sentence.split('');
+    let length = characters.length;
+    return characters.slice(0,length/2).every(
+                function(character, index){
+                    return character == characters[length - index - 1];
+                },characters);
 }
 
 function main()
 {
     let sentence = "madam madaM";
     console.log(sentence + " is Palindrome : " + checkPalindrome(sentence));
-    sentence = "AbcbA";
+    sentence = "AbbA";
     console.log(sentence + " is palindrome : " + checkPalindrome(sentence));
 }
 
