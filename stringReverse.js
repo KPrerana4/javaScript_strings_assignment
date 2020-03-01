@@ -12,8 +12,7 @@ function getReverse(sentence)
 {
     if(sentence == "")
         return sentence;
-    let characters = sentence.split('');
-    return characters.reduceRight(function(accumulator, character){
+    return sentence.split('').reduceRight(function(accumulator, character){
             return accumulator + character;
           });
 }
