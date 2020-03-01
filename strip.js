@@ -1,34 +1,40 @@
-function strip(string)
+function strip(sentence)
 {
-    string = removeLeadingSpaces(string);
-    string = removeTrailingSpaces(string);
-    return string;
-}
-
-function removeLeadingSpaces(string)
-{
-    for(let index = 0; index < string.length; index++){
-        if(string[index] != ' '){
-            return string.substring(index, string.length);
-        }
+    if(sentence.length == 0){
+        return sentence;
     }
+    let firstNonWhiteSpace = removeLeadingSpaces(sentence);
+    let lastNonWhiteSpace = removeTrailingSpaces(sentence);
+    return sentence.slice(firstNonWhiteSpace, lastNonWhiteSpace);
 }
 
-function removeTrailingSpaces(string)
+function removeLeadingSpaces(sentence)
 {
-    let index = string.length - 1;
-    while(index >= 0 && string[index] == ' '){
+    let index = 0;
+    while(index < sentence.length && sentence[index] == " ")
+    {
+        index++;
+    }
+    return index;
+}
+
+function removeTrailingSpaces(sentence)
+{
+    let index = sentence.length - 1;
+    while(index >= 0 && sentence[index] == ' '){
         index--;
     }
-    return string.substring(0, index + 1);
+    return index;
 }
 
 function main()
 {
-    let string = "   abcde     ";
-    console.log("String after removing leading and trailing spaces :\"" + strip(string)+"\"");
-    string = "    Abcdef";
-    console.log("String after removing leading and trailing spaces :\"" + strip(string)+"\"");
+    let sentence = "   abcde     ";
+    console.log("strip( \""+ sentence +"\"):\"" + strip(sentence)+"\"");
+    sentence = "    Abcdef";
+    console.log("strip( \""+ sentence +"\"):\"" + strip(sentence)+"\"");
+    sentence = "           ";
+    console.log("strip( \""+ sentence +"\"):\"" + strip(sentence)+"\"");
 }
 
 main();
