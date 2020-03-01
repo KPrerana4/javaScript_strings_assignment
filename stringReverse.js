@@ -8,12 +8,24 @@ function reverse(sentence)
     return sentenceReverse;
 }
 
+function getReverse(sentence)
+{
+    if(sentence == "")
+        return sentence;
+    let characters = sentence.split('');
+    return characters.reduceRight(function(accumulator, character){
+            return accumulator + character;
+          });
+}
+
 function main()
 {
     let sentence = "madaM Hello";
     console.log("Reverse of \"" + sentence + "\" is : " + reverse(sentence));
+    console.log("Using reduceRight : " + getReverse(sentence));
     sentence = "";
     console.log("Reverse of \"" + sentence + "\" is : " + reverse(sentence));
+    console.log("Using reduceRight : " + getReverse(sentence));
 }
 
 main();
