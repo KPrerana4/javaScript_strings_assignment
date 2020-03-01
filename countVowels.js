@@ -1,8 +1,7 @@
 function countVowels(sentence){
-    let vowelsCount = 0;
-    sentence = sentence.toUpperCase();
-    for(let char of sentence){
-      if(char == 'A' || char == 'E' ||char == 'I' ||char == 'O' ||char == 'U'){
+    let vowelsCount = 0, vowels = 'AEIOU';
+    for(let character of sentence.toUpperCase()){
+      if(vowels.includes(character)){
             vowelsCount++;
       }
     }
@@ -21,8 +20,8 @@ function countVowels(sentence)
 
 function main()
 {
-    let sentence = "The quick brown fox jumps over the lazy dog. It barked.";
-    console.log("Number of vowels in \"" +sentence+ "\":" + countVowels(sentence));
+    let sentence = "This is a sentence.";
+    console.log("Number of vowels : "+ countVowels(sentence));
 }
 
 main();
