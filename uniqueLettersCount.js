@@ -2,7 +2,7 @@ function countUniqueLetters(sentence)
 {
     let uniqueLetters = [];
     for(let char of sentence.toUpperCase()){
-        if(isAlphabet(char) && checkIfExists(char, uniqueLetters)){
+        if(isAlphabet(char) && !checkIfExists(char, uniqueLetters)){
             uniqueLetters.push(char);
         }
     }
@@ -16,14 +16,7 @@ function isAlphabet(char)
 
 function checkIfExists(char, uniqueLetters)
 {
-    for(element of uniqueLetters)
-    {
-        if(element == char)
-        {
-            return false;
-        }
-    }
-    return true;
+    return uniqueLetters.includes(char);
 }
 
 function main()
