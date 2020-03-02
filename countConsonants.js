@@ -1,13 +1,11 @@
 function countConsonants(sentence)
 {
-    let characters = sentence.toUpperCase().split('');
-    return characters.filter(isConsonant).length;
+    return sentence.toUpperCase().split('').filter(isConsonant).length;
 }
 
 function isConsonant(character)
 {
-    let isVowel, isAlphabet;
-    isAlphabet = character >= 'A' && character <= 'Z';
+    let isAlphabet = character >= 'A' && character <= 'Z';
     return isAlphabet && !("AEIOU".includes(character));
 }
 
