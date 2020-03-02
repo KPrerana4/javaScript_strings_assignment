@@ -1,12 +1,11 @@
 function reverseWords(sentence)
 {
-    let words = sentence.split(" "), wordsReverse = "";
-    for(let index = words.length - 1; index >= 0; index--){
-        wordsReverse += words[index] + " ";
-    }
-    return wordsReverse;
+    let words = sentence.split(" ");
+    return words.reduceRight(function(sentence, word){
+        return sentence + " " + word;
+    });
 }
 
-console.log(reverseWords("This   is my name  "));
+console.log(reverseWords("  This   is my name  "));
 console.log(reverseWords(""));
 console.log(reverseWords(" Abcd "));
