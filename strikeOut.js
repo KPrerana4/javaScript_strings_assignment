@@ -5,11 +5,7 @@ function strikeOut(sentence, word)
 
 function replace(character)
 {
-    if(character == this)
-    {
-        return '-';
-    }
-    return character;
+    return character == this ? '-' : character;
 }
 
 console.log(strikeOut("hello fellow","l"));
