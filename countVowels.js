@@ -7,10 +7,7 @@ function countVowels(sentence)
 
 function isVowel(character)
 {
-    if("AEIOU".includes(character)){
-        return true;
-    }
-    return false;
+    return "AEIOU".includes(character);
 }
 
 function main()
